@@ -9,7 +9,7 @@ export default function App() {
   const [count, setCount] = useState(0);
   const sumTotal = () => {
     // return count;
-    return count - 100;
+    return count - 100 + b;
   };
   const handleClick = () => {
     setCount(sumTotal());
