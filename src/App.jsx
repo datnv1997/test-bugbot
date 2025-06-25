@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const imgWepikExport20231026003443TjA71 = "http://localhost:3845/assets/92bb2a2fd5c9e4ebd1ab04fad9ea9737b8ff64b2.png";
 const imgVector = "http://localhost:3845/assets/43acbb5d2f9a23555f7f47783c3ba7c10a5cc675.svg";
@@ -6,9 +6,18 @@ const imgEllipse5 = "http://localhost:3845/assets/50de0ea4ace7629c508ea88997dbe8
 const imgVector1 = "http://localhost:3845/assets/cb4ad923caa10cf0b19648c049a19b2dacc02be0.svg";
 
 export default function App() {
+  const [count, setCount] = useState(0);
+  const sumTotal = () => {
+    // return count;
+    return count - 100;
+  };
+  const handleClick = () => {
+    setCount(sumTotal());
+  };
   return (
     <div className="bg-neutral-900 relative min-h-screen w-full font-sans overflow-hidden">
       {/* Background Vector */}
+      <button onClick={handleClick}>Click me</button>
       <div className="absolute flex h-0 items-center justify-center left-[-610px] top-[-440px] w-0">
         <div className="flex-none rotate-[342.401deg]">
           <div className="h-[487.197px] relative w-[1670px]">
