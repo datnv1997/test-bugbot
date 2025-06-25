@@ -7,17 +7,17 @@ const imgVector1 = "http://localhost:3845/assets/cb4ad923caa10cf0b19648c049a19b2
 
 export default function App() {
   const [count, setCount] = useState(0);
-  const fibonacci = (n) => {
-    if (n <= 1) return;
-    return fibonacci(n - 1) + fibonacci(n - 2);
-  };
+  // const fibonacci = (n) => {
+  //   if (n <= 1) return;
+  //   return fibonacci(n - 1) + fibonacci(n - 2);
+  // };
   const sumTotal = () => {
     // return count;
     return count - 100;
   };
 
   const handleClick = () => {
-    setCount(fibonacci());
+    setCount(sumTotal());
   };
   useEffect(() => {
     setTimeout(() => {
