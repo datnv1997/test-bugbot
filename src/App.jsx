@@ -7,12 +7,16 @@ const imgVector1 = "http://localhost:3845/assets/cb4ad923caa10cf0b19648c049a19b2
 
 export default function App() {
   const [count, setCount] = useState(0);
+  const fibonacci = (n) => {
+    if (n <= 1) return;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  };
   const sumTotal = () => {
     // return count;
-    return count - 100 + b;
+    return count - 100;
   };
   const handleClick = () => {
-    setCount(sumTotal());
+    setCount(fibonacci());
   };
   return (
     <div className="bg-neutral-900 relative min-h-screen w-full font-sans overflow-hidden">
