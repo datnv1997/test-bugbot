@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const imgWepikExport20231026003443TjA71 = "http://localhost:3845/assets/92bb2a2fd5c9e4ebd1ab04fad9ea9737b8ff64b2.png";
 const imgVector = "http://localhost:3845/assets/43acbb5d2f9a23555f7f47783c3ba7c10a5cc675.svg";
@@ -7,13 +7,24 @@ const imgVector1 = "http://localhost:3845/assets/cb4ad923caa10cf0b19648c049a19b2
 
 export default function App() {
   const [count, setCount] = useState(0);
+  const fibonacci = (n) => {
+    if (n <= 1) return;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  };
   const sumTotal = () => {
     // return count;
     return count - 100;
   };
+
   const handleClick = () => {
-    setCount(sumTotal());
+    setCount(fibonacci());
   };
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setCount(9);
+  //   }, 6000);
+  // }, []);
+
   return (
     <div className="bg-neutral-900 relative min-h-screen w-full font-sans overflow-hidden">
       {/* Background Vector */}
